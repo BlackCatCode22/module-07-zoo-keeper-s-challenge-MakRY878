@@ -11,7 +11,7 @@ class Lion(Animal):
     # Create a list of lion names.
     list_of_lion_names = []
 
-    file_path = r'C:\2023spring\2023fall\python\dataFiles\animalNames.txt'
+    file_path = r'C:\Users\Makal\PycharmProjects\ZooKeeperChallenge\animalNames.txt'
     with open(file_path, 'r') as file:
         lines = file.readlines()
 
@@ -24,13 +24,13 @@ class Lion(Animal):
             else:
                 line_num += 1
 
-    def __init__(self, name="a_name", animal_id="an_id", birth_date="2099-01-01", color="a_color", gender="a_gender",
+    def __init__(self, name="a_name", animal_id="an_id", birth_date="2099-01-01", color="a_color", sex="a_sex",
                  weight="a_weight", originating_zoo="a_zoo", date_arrival="2099-01-01"):
         # Increment the static variable numOfLions when a new Lion object is created
         Lion.numOfLions += 1
 
-        # Call the constructor of the parent class (Animal) with 'Hyena' as the species
-        super().__init__("lion", name, animal_id, birth_date, color, gender, weight, originating_zoo, date_arrival)
+        # Call the constructor of the parent class (Animal) with 'lion' as the species
+        super().__init__("lion", name, animal_id, birth_date, color, sex, weight, originating_zoo, date_arrival)
 
     def make_sound(self):
         return self.lion_sound
